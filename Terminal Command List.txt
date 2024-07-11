@@ -1,0 +1,14 @@
+dotnet
+dotnet --version
+dotnet --list-sdks
+dotnet --list-runtimes
+dotnet new --help
+dotnet new list
+code --version
+code .
+dotnet new mvc -h
+dotnet new mvc -o Basics
+cd .\Basics\
+ls
+dotnet build
+dotnet run

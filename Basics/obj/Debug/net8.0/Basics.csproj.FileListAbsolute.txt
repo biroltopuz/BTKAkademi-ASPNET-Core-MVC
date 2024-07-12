@@ -28,3 +28,4 @@ D:\GitHub\BTKAkademi_ASPNET-Core-MVC\Basics\obj\Debug\net8.0\refint\Basics.dll
 D:\GitHub\BTKAkademi_ASPNET-Core-MVC\Basics\obj\Debug\net8.0\Basics.pdb
 D:\GitHub\BTKAkademi_ASPNET-Core-MVC\Basics\obj\Debug\net8.0\Basics.genruntimeconfig.cache
 D:\GitHub\BTKAkademi_ASPNET-Core-MVC\Basics\obj\Debug\net8.0\ref\Basics.dll
+D:\GitHub\BTKAkademi_ASPNET-Core-MVC\Basics\obj\Debug\net8.0\Basics.sourcelink.json

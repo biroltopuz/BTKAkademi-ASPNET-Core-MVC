@@ -12,3 +12,4 @@ cd .\Basics\
 ls
 dotnet build
 dotnet run
+dotnet watch

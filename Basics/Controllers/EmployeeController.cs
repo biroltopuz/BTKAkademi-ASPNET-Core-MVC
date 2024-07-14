@@ -7,10 +7,12 @@ namespace Basics.Controllers
     public class EmployeeController : Controller
     {
         public IActionResult Index1(){
+            //return "Hello World.";
             string message = $"Hello World. {DateTime.Now.ToString()}";
             return View("Index1", message);
         }
         public ViewResult Index2(){
+            //return View("Index");
             var names = new String[]
             {
                 "Ahmet",

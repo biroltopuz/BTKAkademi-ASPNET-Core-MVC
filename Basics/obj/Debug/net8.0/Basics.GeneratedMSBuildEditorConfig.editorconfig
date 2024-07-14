@@ -18,8 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\GitHub\BTKAkademi_ASPNET-Core-MVC\Basics
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHub/BTKAkademi_ASPNET-Core-MVC/Basics/Views/Employee/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+[D:/GitHub/BTKAkademi_ASPNET-Core-MVC/Basics/Views/Employee/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXgxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/BTKAkademi_ASPNET-Core-MVC/Basics/Views/Employee/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXgyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/BTKAkademi_ASPNET-Core-MVC/Basics/Views/Employee/Index3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXgzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GitHub/BTKAkademi_ASPNET-Core-MVC/Basics/Views/Home/Index.cshtml]

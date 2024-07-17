@@ -13,5 +13,20 @@ ls
 dotnet build
 dotnet run
 dotnet watch
+
 dotnet new mvc -f net6.0 --output BtkAkademi
+dotnet new gitignore
+
+dotnet new sln -o Store
+cd Store
+.\Store.sln
+cd ..
+dotnet new --list
+dotnet new web -f net6.0 -o .\Store\StoreApp
+dotnet sln --help
+dotnet sln .\Store\ add .\Store\StoreApp\
+cd Store
+dotnet sln .\Store.sln list
+cd ..
+code .
 dotnet new gitignore

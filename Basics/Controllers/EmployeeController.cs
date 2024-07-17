@@ -25,8 +25,8 @@ namespace Basics.Controllers
             //return Content("Employee");
             var list = new List<Employee>(){
                 new Employee(){Id=1, FirstName="Ahmet", LastName="Can", Age=20},
-                new Employee(){Id=1, FirstName="Can", LastName="Dağ", Age=25},
-                new Employee(){Id=1, FirstName="Demir", LastName="Güneş", Age=37}
+                new Employee(){Id=2, FirstName="Can", LastName="Dağ", Age=25},
+                new Employee(){Id=3, FirstName="Demir", LastName="Güneş", Age=37}
             };
             return View("Index3", list);
         }

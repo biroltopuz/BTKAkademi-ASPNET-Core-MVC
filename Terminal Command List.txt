@@ -13,3 +13,5 @@ ls
 dotnet build
 dotnet run
 dotnet watch
+dotnet new mvc -f net6.0 --output BtkAkademi
+dotnet new gitignore

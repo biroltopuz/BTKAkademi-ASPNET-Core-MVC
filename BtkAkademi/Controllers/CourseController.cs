@@ -16,7 +16,9 @@ namespace BtkAkademi.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Apply([FromForm] Candidate model){
-            return View();
+            //return View();
+            Repository.Add(model);
+            return Redirect("/");
         }
     }
 }

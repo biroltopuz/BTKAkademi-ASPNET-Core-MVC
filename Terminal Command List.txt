@@ -1,3 +1,4 @@
+# Basics Project
 dotnet
 dotnet --version
 dotnet --list-sdks
@@ -14,9 +15,11 @@ dotnet build
 dotnet run
 dotnet watch
 
+# BtkAkademi Project
 dotnet new mvc -f net6.0 --output BtkAkademi
 dotnet new gitignore
 
+# Store Project
 dotnet new sln -o Store
 cd Store
 .\Store.sln
@@ -30,3 +33,6 @@ dotnet sln .\Store.sln list
 cd ..
 code .
 dotnet new gitignore
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
+dotnet list package
+dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0

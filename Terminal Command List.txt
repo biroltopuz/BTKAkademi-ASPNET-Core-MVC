@@ -36,3 +36,17 @@ dotnet new gitignore
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
 dotnet list package
 dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
+cd StoreApp
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
+dotnet tool list 
+dotnet tool list -h
+dotnet tool list -g
+dotnet ef
+## version=6.0.10
+    dotnet tool install dotnet-ef -g  
+## version 6.0.0
+    dotnet tool install dotnet-sql-cache -g
+## version 5.0.2
+    dotnet tool install microsoft.dotnet-httprepl -g
+## version 2.1.161
+    dotnet tool install microsoft.web.librarymanager.cli -g

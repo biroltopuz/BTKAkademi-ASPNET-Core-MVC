@@ -50,3 +50,20 @@ dotnet ef
     dotnet tool install microsoft.dotnet-httprepl -g
 ## version 2.1.161
     dotnet tool install microsoft.web.librarymanager.cli -g
+dotnet ef migrations -h
+dotnet ef migrations add -h
+dotnet ef migrations add init
+dotnet ef database -h
+dotnet ef database update
+dotnet ef migrations add ProductSeedData
+dotnet ef database update
+sqlite3 .\ProductDb.db
+    .tables
+    .help
+    .system dir
+    .system cls
+    .show
+    .mode box
+    .show
+    select * from Products;
+    .quit

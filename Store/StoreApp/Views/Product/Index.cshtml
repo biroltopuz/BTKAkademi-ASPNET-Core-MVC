@@ -10,10 +10,14 @@
 </head>
 
 <body>
-    @foreach(StoreApp.Models.Product prd in Model){
+    @foreach (StoreApp.Models.Product prd in Model)
+    {
         <div>
             <h3>@prd.ProductName</h3>
             <p>@prd.Price</p>
+            <p>
+                <a href="/Product/Get/@prd.ProductId">Get Details</a>
+            </p>
         </div>
     }
 </body>

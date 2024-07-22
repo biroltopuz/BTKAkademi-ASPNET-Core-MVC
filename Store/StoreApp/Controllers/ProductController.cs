@@ -22,7 +22,6 @@ namespace StoreApp.Controllers
             //     .UseSqlite("Data Source = D:\\GitHub\\BTKAkademi_ASPNET-Core-MVC\\ProductDb.db")
             //     .Options
             // );
-
             // return context.Products;
 
             // return new List<Product>()
@@ -35,6 +34,12 @@ namespace StoreApp.Controllers
         {
             var model = _context.Products.ToList();
             return View(model);
+        }
+
+        public IActionResult Get(int ID)
+        {
+            Product product = _context.Products.First(p => p.ProductId.Equals(ID));
+            return View(product);
         }
     }
 }

@@ -67,3 +67,8 @@ sqlite3 .\ProductDb.db
     .show
     select * from Products;
     .quit
+libman init -h
+libman init -p cdnjs
+libman install bootstrap -d wwwroot/lib/bootstrap
+libman install font-awesome -d wwwroot/lib/font-awesome
+libman install jquery -d wwwroot/lib/jquery

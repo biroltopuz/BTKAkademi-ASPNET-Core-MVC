@@ -13,23 +13,6 @@ namespace StoreApp.Controllers
             _context = context;
         }
 
-        public IEnumerable<Product> IndexEski()
-        {
-            return _context.Products;
-
-            // var context = new RepositoryContext(
-            //     new DbContextOptionsBuilder<RepositoryContext>()
-            //     .UseSqlite("Data Source = D:\\GitHub\\BTKAkademi_ASPNET-Core-MVC\\ProductDb.db")
-            //     .Options
-            // );
-            // return context.Products;
-
-            // return new List<Product>()
-            // {
-            //     new Product(){ProductId=1, ProductName="Computer", Price=5}
-            // };
-        }
-
         public IActionResult Index()
         {
             var model = _context.Products.ToList();

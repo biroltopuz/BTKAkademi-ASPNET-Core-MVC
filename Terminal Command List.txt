@@ -91,3 +91,15 @@ dotnet add .\Repositories\ package Microsoft.EntityFrameworkCore.Sqlite --versio
 dotnet list .\Repositories\ package
 dotnet list .\StoreApp\ package
 dotnet remove .\StoreApp\ package Microsoft.EntityFrameworkCore
+dotnet remove .\StoreApp\ package Microsoft.EntityFrameworkCore.Sqlite
+dotnet build
+dotnet list .\StoreApp\ package
+cd StoreApp
+dotnet build
+cd ..
+dotnet add .\Repositories\ reference .\Entities\
+cd StoreApp
+dotnet build
+dotnet ef database drop
+dotnet ef migrations add init
+dotnet ef database update

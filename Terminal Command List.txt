@@ -72,3 +72,12 @@ libman init -p cdnjs
 libman install bootstrap -d wwwroot/lib/bootstrap
 libman install font-awesome -d wwwroot/lib/font-awesome
 libman install jquery -d wwwroot/lib/jquery
+cd ..
+dotnet new classlib -f net6.0 -o .\Entities
+dotnet sln .\Store.sln list
+dotnet sln .\Store.sln add .\Entities\
+dotnet add -h
+dotnet add .\StoreApp\ reference .\Entities\
+dotnet build
+cd StoreApp
+dotnet watch

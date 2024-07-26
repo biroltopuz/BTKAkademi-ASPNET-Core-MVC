@@ -81,3 +81,13 @@ dotnet add .\StoreApp\ reference .\Entities\
 dotnet build
 cd StoreApp
 dotnet watch
+cd ..
+dotnet new classlib -f net6.0 -o .\Repositories
+dotnet sln .\Store.sln add .\Repositories\
+dotnet sln .\Store.sln list
+dotnet add .\StoreApp\ reference .\Repositories\
+dotnet add .\Repositories\ package Microsoft.EntityFrameworkCore --version 6.0.0
+dotnet add .\Repositories\ package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
+dotnet list .\Repositories\ package
+dotnet list .\StoreApp\ package
+dotnet remove .\StoreApp\ package Microsoft.EntityFrameworkCore

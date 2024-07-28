@@ -103,3 +103,5 @@ dotnet build
 dotnet ef database drop
 dotnet ef migrations add init
 dotnet ef database update
+dotnet ef migrations add Category
+dotnet ef database update

@@ -110,3 +110,6 @@ dotnet new classlib -f net6.0 -o .\Services
 dotnet sln .\Store.sln add .\Services\
 dotnet add .\Services\ reference .\Entities\
 dotnet add .\Services\ reference .\Repositories\
+dotnet add .\StoreApp\ reference .\Services\
+cd StoreApp
+dotnet build

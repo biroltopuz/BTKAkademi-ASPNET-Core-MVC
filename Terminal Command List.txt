@@ -105,3 +105,8 @@ dotnet ef migrations add init
 dotnet ef database update
 dotnet ef migrations add Category
 dotnet ef database update
+cd ..
+dotnet new classlib -f net6.0 -o .\Services
+dotnet sln .\Store.sln add .\Services\
+dotnet add .\Services\ reference .\Entities\
+dotnet add .\Services\ reference .\Repositories\

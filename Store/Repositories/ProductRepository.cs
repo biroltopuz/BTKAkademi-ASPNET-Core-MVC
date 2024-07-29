@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System.Transactions;
 using Entities.Models;
 using Repositories.Contracts;
@@ -10,6 +11,8 @@ namespace Repositories
         {
 
         }
+
+        public void CreateProduct(Product product) => Create(product);
 
         public IQueryable<Product> GetAllProducts(bool trackChanges) => FindAll(trackChanges);
 

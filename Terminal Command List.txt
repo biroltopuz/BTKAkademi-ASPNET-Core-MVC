@@ -113,3 +113,7 @@ dotnet add .\Services\ reference .\Repositories\
 dotnet add .\StoreApp\ reference .\Services\
 cd StoreApp
 dotnet build
+dotnet ef database drop
+del .\Migrations\
+dotnet ef migrations add init
+dotnet ef database update

@@ -1,3 +1,4 @@
+using Entities.Dtos;
 using Entities.Models;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
@@ -26,17 +27,20 @@ namespace StoreApp.Areas.Admin.Controllers
         {
             // ViewBag.Categories = _manager.CategoryService.GetAllCategories(false);
             ViewBag.Categories = 
-                new SelectList(_manager.CategoryService.GetAllCategories(false), "CategoryId", "CategoryName", "1");
+                new SelectList(_manager.CategoryService.GetAllCategories(false), 
+                "CategoryId", 
+                "CategoryName", "1");
+            
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([FromForm] Product product)
+        public IActionResult Create([FromForm] ProductDtoForInsertion productDto)
         {
             if (ModelState.IsValid)
             {
-                _manager.ProductService.CreateProduct(product);
+                _manager.ProductService.CreateProduct(productDto);
                 return RedirectToAction("Index");
             }
             return View();

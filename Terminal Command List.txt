@@ -117,3 +117,7 @@ dotnet ef database drop
 del .\Migrations\
 dotnet ef migrations add init
 dotnet ef database update
+cd ..
+dotnet list .\Services\ package
+dotnet add .\Services\ package AutoMapper.Extensions.Microsoft.DependencyInjection
+cd StoreApp

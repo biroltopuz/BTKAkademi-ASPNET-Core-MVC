@@ -11,8 +11,8 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240801130916_init")]
-    partial class init
+    [Migration("20240803123217_start")]
+    partial class start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,6 +43,11 @@ namespace StoreApp.Migrations
                         {
                             CategoryId = 2,
                             CategoryName = "Electronic"
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            CategoryName = "SmartPhone"
                         });
                 });
 
@@ -55,11 +60,17 @@ namespace StoreApp.Migrations
                     b.Property<int?>("CategoryId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("TEXT");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ProductId");
@@ -73,50 +84,100 @@ namespace StoreApp.Migrations
                         {
                             ProductId = 1,
                             CategoryId = 2,
+                            ImageUrl = "/images/1.jpg",
                             Price = 17000m,
-                            ProductName = "Computer"
+                            ProductName = "Computer",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 2,
                             CategoryId = 2,
+                            ImageUrl = "/images/2.jpg",
                             Price = 1000m,
-                            ProductName = "Keyboard"
+                            ProductName = "Keyboard",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 3,
                             CategoryId = 2,
+                            ImageUrl = "/images/3.jpg",
                             Price = 500m,
-                            ProductName = "Mouse"
+                            ProductName = "Mouse",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 4,
                             CategoryId = 2,
+                            ImageUrl = "/images/4.jpg",
                             Price = 7000m,
-                            ProductName = "Monitor"
+                            ProductName = "Monitor",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 5,
                             CategoryId = 2,
+                            ImageUrl = "/images/5.jpg",
                             Price = 1500m,
-                            ProductName = "Deck"
+                            ProductName = "Deck",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 6,
                             CategoryId = 1,
+                            ImageUrl = "/images/6.jpg",
                             Price = 25m,
-                            ProductName = "History"
+                            ProductName = "History",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 7,
                             CategoryId = 1,
+                            ImageUrl = "/images/7.jpg",
                             Price = 45m,
-                            ProductName = "Hamlet"
+                            ProductName = "Hamlet",
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            CategoryId = 1,
+                            ImageUrl = "/images/8.jpg",
+                            Price = 50m,
+                            ProductName = "My Notebook",
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            CategoryId = 3,
+                            ImageUrl = "/images/9.jpg",
+                            Price = 15000m,
+                            ProductName = "IPhone X",
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            CategoryId = 3,
+                            ImageUrl = "/images/10.jpg",
+                            Price = 15000m,
+                            ProductName = "Samsung Galaxy Note FE",
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 11,
+                            CategoryId = 3,
+                            ImageUrl = "/images/11.jpg",
+                            Price = 22000m,
+                            ProductName = "IPhone 14",
+                            Summary = ""
                         });
                 });
 

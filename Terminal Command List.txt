@@ -121,3 +121,7 @@ cd ..
 dotnet list .\Services\ package
 dotnet add .\Services\ package AutoMapper.Extensions.Microsoft.DependencyInjection
 cd StoreApp
+dotnet ef database drop
+del .\Migrations\
+dotnet ef migrations add start
+dotnet ef database update

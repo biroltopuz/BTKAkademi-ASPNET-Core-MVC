@@ -125,3 +125,4 @@ dotnet ef database drop
 del .\Migrations\
 dotnet ef migrations add start
 dotnet ef database update
+dotnet new list

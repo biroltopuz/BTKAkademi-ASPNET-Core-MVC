@@ -19,7 +19,13 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
 });
 
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = "StoreApp.Session";
+    options.IdleTimeout = TimeSpan.FromMinutes(10);
+});
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -47,9 +53,9 @@ app.UseEndpoints(endpoints =>
         areaName: "Admin",
         pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}"
     );
-    
+
     endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-    
+
     endpoints.MapRazorPages();
 });
 

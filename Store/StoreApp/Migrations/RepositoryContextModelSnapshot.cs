@@ -129,6 +129,9 @@ namespace StoreApp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("ShowCase")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
@@ -146,6 +149,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/1.jpg",
                             Price = 17000m,
                             ProductName = "Computer",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -155,6 +159,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/2.jpg",
                             Price = 1000m,
                             ProductName = "Keyboard",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -164,6 +169,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/3.jpg",
                             Price = 500m,
                             ProductName = "Mouse",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -173,6 +179,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/4.jpg",
                             Price = 7000m,
                             ProductName = "Monitor",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -182,6 +189,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/5.jpg",
                             Price = 1500m,
                             ProductName = "Deck",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -191,6 +199,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/6.jpg",
                             Price = 25m,
                             ProductName = "History",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -200,6 +209,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/7.jpg",
                             Price = 45m,
                             ProductName = "Hamlet",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -209,6 +219,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/8.jpg",
                             Price = 50m,
                             ProductName = "My Notebook",
+                            ShowCase = true,
                             Summary = ""
                         },
                         new
@@ -218,6 +229,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/9.jpg",
                             Price = 15000m,
                             ProductName = "IPhone X",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -226,7 +238,8 @@ namespace StoreApp.Migrations
                             CategoryId = 3,
                             ImageUrl = "/images/10.jpg",
                             Price = 15000m,
-                            ProductName = "Samsung Galaxy Note FE",
+                            ProductName = "Galaxy Note FE",
+                            ShowCase = true,
                             Summary = ""
                         },
                         new
@@ -236,6 +249,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/11.jpg",
                             Price = 22000m,
                             ProductName = "IPhone 14",
+                            ShowCase = true,
                             Summary = ""
                         });
                 });

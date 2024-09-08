@@ -20,7 +20,7 @@ namespace Repositories.Config
                 new Product() { ProductId = 5, CategoryId = 2, ImageUrl = "/images/5.jpg", ProductName = "Deck", Price = 1_500, ShowCase=false },
                 new Product() { ProductId = 6, CategoryId = 1, ImageUrl = "/images/6.jpg", ProductName = "History", Price = 25, ShowCase=false },
                 new Product() { ProductId = 7, CategoryId = 1, ImageUrl = "/images/7.jpg", ProductName = "Hamlet", Price = 45, ShowCase=false },
-                new Product() { ProductId = 8, CategoryId = 1, ImageUrl = "/images/8.jpg", ProductName = "My Notebook", Price = 50, ShowCase=true },
+                new Product() { ProductId = 8, CategoryId = 1, ImageUrl = "/images/8.jpg", ProductName = "Teknolojinin Ötesi", Price = 50, ShowCase=true },
                 new Product() { ProductId = 9, CategoryId = 3, ImageUrl = "/images/9.jpg", ProductName = "IPhone X", Price = 15000, ShowCase=false },
                 new Product() { ProductId = 10, CategoryId = 3, ImageUrl = "/images/10.jpg", ProductName = "Galaxy Note FE", Price = 15000, ShowCase=true },
                 new Product() { ProductId = 11, CategoryId = 3, ImageUrl = "/images/11.jpg", ProductName = "IPhone 14", Price = 22000, ShowCase=true }

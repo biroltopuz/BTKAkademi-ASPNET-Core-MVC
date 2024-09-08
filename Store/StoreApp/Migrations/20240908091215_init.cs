@@ -144,7 +144,7 @@ namespace StoreApp.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "ProductId", "CategoryId", "ImageUrl", "Price", "ProductName", "ShowCase", "Summary" },
-                values: new object[] { 8, 1, "/images/8.jpg", 50m, "My Notebook", true, "" });
+                values: new object[] { 8, 1, "/images/8.jpg", 50m, "Teknolojinin Ötesi", true, "" });
 
             migrationBuilder.InsertData(
                 table: "Products",

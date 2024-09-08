@@ -1,6 +1,8 @@
 using System.Runtime.InteropServices;
 using System.Transactions;
 using Entities.Models;
+using Entities.RequestParameters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Repositories.Contracts;
 
@@ -18,6 +20,18 @@ namespace Repositories
         public void DeleteOneProduct(Product product) => Remove(product);
 
         public IQueryable<Product> GetAllProducts(bool trackChanges) => FindAll(trackChanges);
+
+        public IQueryable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
+        {
+            return p.CategoryId is null 
+                ? _context
+                    .Products
+                    .Include(prd => prd.Category)
+                : _context
+                    .Products
+                    .Include(prd => prd.Category)
+                    .Where(prd => prd.CategoryId.Equals(p.CategoryId));
+        }
 
         // Interface
         public Product? GetOneProduct(int id, bool trackChanges)

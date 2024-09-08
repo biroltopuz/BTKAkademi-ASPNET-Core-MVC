@@ -11,7 +11,7 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240908063039_init")]
+    [Migration("20240908091215_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -220,7 +220,7 @@ namespace StoreApp.Migrations
                             CategoryId = 1,
                             ImageUrl = "/images/8.jpg",
                             Price = 50m,
-                            ProductName = "My Notebook",
+                            ProductName = "Teknolojinin Ötesi",
                             ShowCase = true,
                             Summary = ""
                         },

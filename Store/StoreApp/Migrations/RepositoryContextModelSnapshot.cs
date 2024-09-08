@@ -218,7 +218,7 @@ namespace StoreApp.Migrations
                             CategoryId = 1,
                             ImageUrl = "/images/8.jpg",
                             Price = 50m,
-                            ProductName = "My Notebook",
+                            ProductName = "Teknolojinin Ötesi",
                             ShowCase = true,
                             Summary = ""
                         },

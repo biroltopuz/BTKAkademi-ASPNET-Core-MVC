@@ -126,3 +126,14 @@ del .\Migrations\
 dotnet ef migrations add start
 dotnet ef database update
 dotnet new list
+cd ..
+dotnet list -h
+dotnet list .\Entities\ package
+dotnet add -h
+dotnet add .\Entities\ package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.0
+dotnet list .\Entities\ package
+cd StoreApp
+dotnet ef database drop
+del .\Migrations\
+dotnet ef migrations add startIdentity
+dotnet watch

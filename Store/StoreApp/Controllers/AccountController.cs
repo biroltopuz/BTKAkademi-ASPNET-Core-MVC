@@ -18,9 +18,12 @@ namespace StoreApp.Controllers
             _signInManager = signInManager;
         }
 
-        public IActionResult Login()
+        public IActionResult Login([FromQuery(Name = "ReturnUrl")] string ReturnUrl = "/")
         {
-            return View();
+            return View(new LoginModel()
+            {
+                ReturnUrl = ReturnUrl
+            });
         }
 
         [HttpPost]
@@ -41,6 +44,12 @@ namespace StoreApp.Controllers
                 ModelState.AddModelError("Error", "Invalid username or password.");
             }
             return View();
+        }
+
+        public async Task<IActionResult> Logout([FromQuery(Name = "ReturnUrl")] string ReturnUrl = "/")
+        {
+            await _signInManager.SignOutAsync();
+            return Redirect(ReturnUrl);
         }
     }
 }

@@ -137,3 +137,5 @@ dotnet ef database drop
 del .\Migrations\
 dotnet ef migrations add startIdentity
 dotnet watch
+dotnet ef migrations add IdentityRoleSeedData
+dotnet watch

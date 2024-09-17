@@ -28,7 +28,7 @@ namespace StoreApp.Areas.Admin.Controllers
                     .AuthService
                     .Roles
                     .Select(r => r.Name)
-                    .ToList() )
+                    .ToList())
             });
         }
 
@@ -40,6 +40,12 @@ namespace StoreApp.Areas.Admin.Controllers
             return result.Succeeded
                 ? RedirectToAction("Index")
                 : View();
+        }
+
+        public async Task<IActionResult> Update([FromRoute(Name = "id")] string id)
+        {
+            // var user
+            return View();
         }
 
     }

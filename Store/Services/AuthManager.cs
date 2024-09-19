@@ -55,7 +55,7 @@ namespace Services
         public async Task<UserDtoForUpdate> GetOneUserForUpdate(string userName)
         {
             var user = await GetOneUser(userName);
-            if(user is not null)
+            if (user is not null)
             {
                 var userDto = _mapper.Map<UserDtoForUpdate>(user);
                 userDto.Roles = new HashSet<string>(Roles.Select(r => r.Name).ToList());
@@ -63,6 +63,18 @@ namespace Services
                 return userDto;
             }
             throw new Exception("An error occured.");
+        }
+
+        public async Task<IdentityResult> ResetPassword(ResetPasswordDto model)
+        {
+            var user = await GetOneUser(model.UserName);
+            if (user is not null)
+            {
+                await _userManager.RemovePasswordAsync(user);
+                var result = await _userManager.AddPasswordAsync(user, model.Password);
+                return result;
+            }
+            throw new Exception("User could not be found.");
         }
 
         public async Task Update(UserDtoForUpdate userDto)

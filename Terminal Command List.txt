@@ -139,3 +139,12 @@ dotnet ef migrations add startIdentity
 dotnet watch
 dotnet ef migrations add IdentityRoleSeedData
 dotnet watch
+cd ..
+dotnet new classlib -f net6.0 -o Presentation
+dotnet sln .\Store.sln add .\Presentation\
+dotnet add .\Presentation\ package Microsoft.AspNetCore.Mvc.Core
+dotnet add .\Presentation\ reference .\Services\
+dotnet add .\StoreApp\ reference .\Presentation\
+cd StoreApp
+dotnet build
+dotnet watch

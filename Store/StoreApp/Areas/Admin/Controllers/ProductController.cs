@@ -66,13 +66,13 @@ namespace StoreApp.Areas.Admin.Controllers
             }
             return View();
         }
+
         private SelectList GetCategoriesSelectList()
         {
             return new SelectList(_manager.CategoryService.GetAllCategories(false),
             "CategoryId",
             "CategoryName", "1");
         }
-
 
         public IActionResult Update([FromRoute(Name = "id")] int id)
         {

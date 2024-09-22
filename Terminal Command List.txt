@@ -148,3 +148,11 @@ dotnet add .\StoreApp\ reference .\Presentation\
 cd StoreApp
 dotnet build
 dotnet watch
+cd ..
+dotnet add .\Repositories\ package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.0
+dotnet list .\Repositories\ package
+cd StoreApp
+del .\Migrations\
+dotnet ef database drop
+dotnet ef migrations add init
+dotnet watch
